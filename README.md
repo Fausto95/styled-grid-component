@@ -2,6 +2,7 @@
 
 Grid Element for not writing any more custom grid styles because foda-se!
 
+Notice that this component was inspired by Flex - Element -> https://www.npmjs.com/package/styled-flex-component
 ## Install 
 
 ```
@@ -19,10 +20,10 @@ import Grid, { GridItem } from 'styled-grid-component';
 
 export default () => (
     <Grid width="100%" height="100vh" templateColumns="repeat(3, 1fr)" gap="10px" autoRows="minmax(100px, auto)">
-    <GridItem column="1 / 3" row="1" bgColor="blue">
+    <GridItem column="1 / 3" row="1">
         <h1>Hello</h1>
     </GridItem>
-    <GridItem column="2 / 4" row="1 / 3" bgColor="red">
+    <GridItem column="2 / 4" row="1 / 3">
       <h1>World!</h1>
     </GridItem>
   </Grid>
