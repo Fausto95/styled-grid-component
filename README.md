@@ -3,6 +3,9 @@
 Grid Element for not writing any more custom grid styles because foda-se!
 
 Notice that this component was inspired by Flex - Element -> https://www.npmjs.com/package/styled-flex-component
+
+Test it: https://codesandbox.io/s/m7rzqw40wp
+
 ## Install 
 
 ```
