@@ -1,93 +1,50 @@
-# Styled Flex Component
+# Styled Grid Component
 
-[![Codecov](https://codecov.io/gh/SaraVieira/styled-flex-component/branch/master/graph/badge.svg)](https://codecov.io/gh/SaraVieira/styled-flex-component)
-[![Build Status](https://travis-ci.org/SaraVieira/styled-flex-component.svg)](https://travis-ci.org/SaraVieira/styled-flex-component)
-
-Flex Element for not writing any more custom flex styles because fuck that
+Grid Element for not writing any more custom grid styles because foda-se!
 
 ## Install 
 
 ```
-yarn add styled-flex-component
+yarn add styled-grid-component
 or
-npm i styled-flex-component
+npm i styled-grid-component
 ```
 
 ## Usage
 
 ```jsx
 import React from 'react';
-import Flex, { FlexItem } from 'styled-flex-component';
+import Grid, { GridItem } from 'styled-grid-component';
 
 
 export default () => (
-    <Flex center full>
-        <FlexItem order="2">World</FlexItem>
-        <FlexItem order="1">Hello</FlexItem>
-    </Flex>
+    <Grid width="100%" height="100vh" templateColumns="repeat(3, 1fr)" gap="10px" autoRows="minmax(100px, auto)">
+    <GridItem column="1 / 3" row="1" bgColor="blue">
+        <h1>Hello</h1>
+    </GridItem>
+    <GridItem column="2 / 4" row="1 / 3" bgColor="red">
+      <h1>World!</h1>
+    </GridItem>
+  </Grid>
 )
 ```
 
 ## Props
 
 All props without description are just true or false values and take no arguments
+#### Grid Wrapper
 
-### Flex Container
+* width -> Sets the witdh
+* height -> Sets the height
+* templateColumns -> Sets the grid-template-columns
+* gap -> Sets the grid-gap
+* rowGap -> Sets the grid-row-gap
+* autoRows -> Sets the grid-auto-rows
 
-#### General
+#### GridItem
 
-* full -> Sets width, height and flex basis to 100%
-* inline -> Sets the item to inline-flex
-* center -> Sets justify-content and align-items to center
-
-#### Direction
-
-* rowReverse
-* column
-* columnReverse
-
-#### Wrap
-
-* wrap
-* wrapReverse
-
-
-#### Align Items
-
-* alignCenter
-* alignStart
-* alignEnd
-* alignBaseline
-* alignStretch
-* alignCenter
-
-#### Align Content
-
-* contentCenter
-* contentStart
-* contentEnd
-* contentBaseline
-* contentStretch
-* contentAround
-* contentStretch
-
-#### Justify Content
-
-* justifyCenter
-* justifyStart
-* justifyEnd
-* justifyBetween
-* justifyAround
-* justifyEvenly
-
-### Flex Item
-
-* Order -> Takes a number to se the order of that item
-* basis -> Takes a number to se the flex-basis of that item
-* grow
-* shrink
-* noShrink
-
+* column -> Sets the grid-row
+* row -> Sets the grid-row
 
 # License
 MIT

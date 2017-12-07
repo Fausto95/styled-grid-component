@@ -1,26 +1,11 @@
 import styled from 'styled-components';
 import is from 'styled-is';
 
-const FlexItem = styled.div`
-  ${is('order')`
-    order: ${props => props.order}
-  `};
-
-  ${is('basis')`
-    flex-basis: ${props => props.basis}
-  `};
-
-  ${is('grow')`
-    flex-grow: 1;
-  `};
-
-  ${is('shrink')`
-    flex-shrink: 1;
-  `};
-
-  ${is('noShrink')`
-    flex-shrink: 0;
-  `};
+const GridItem = styled.div`
+  ${is('column')`
+    grid-column: ${props => props.column}`};
+  ${is('row')`
+    grid-row: ${props => props.row}`};
 `;
 
-export default FlexItem;
+export default GridItem;
