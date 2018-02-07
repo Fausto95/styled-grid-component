@@ -2,11 +2,13 @@
 	"name": "styled-grid-component",
 	"description": "Grid Element for not writing any more custom grid styles because foda-se!",
 	"version": "1.1.2",
+	"main": "dist/index.js",
 	"dependencies": {
 		"styled-components": "2.2.4",
 		"styled-is": "1.1.0"
 	},
 	"devDependencies": {
+		"babel-cli": "^6.26.0",
 		"babel-eslint": "^8.0.3",
 		"babel-preset-env": "^1.6.1",
 		"babel-preset-react": "^6.24.1",
@@ -31,7 +33,8 @@
 		"test:jest": "jest",
 		"test:watch": "jest --watch",
 		"test:coverage": "jest --coverage",
-		"test": "npm run test:jest && npm run lint"
+		"test": "npm run test:jest && npm run lint",
+		"dist": "babel -s inline -d dist src"
 	},
 	"license": "MIT",
 	"lint-staged": {
