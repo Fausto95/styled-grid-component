@@ -6,7 +6,7 @@ Notice that this component was inspired by Flex - Element -> https://www.npmjs.c
 
 Test it: https://codesandbox.io/s/m7rzqw40wp
 
-## Install 
+## Install
 
 ```
 yarn add styled-grid-component
@@ -20,22 +20,28 @@ npm i styled-grid-component
 import React from 'react';
 import Grid, { GridItem } from 'styled-grid-component';
 
-
 export default () => (
-    <Grid width="100%" height="100vh" templateColumns="repeat(3, 1fr)" gap="10px" autoRows="minmax(100px, auto)">
+  <Grid
+    width="100%"
+    height="100vh"
+    templateColumns="repeat(3, 1fr)"
+    gap="10px"
+    autoRows="minmax(100px, auto)"
+  >
     <GridItem column="1 / 3" row="1">
-        <h1>Hello</h1>
+      <h1>Hello</h1>
     </GridItem>
     <GridItem column="2 / 4" row="1 / 3">
       <h1>World!</h1>
     </GridItem>
   </Grid>
-)
+);
 ```
 
 ## Props
 
 All props without description are just true or false values and take no arguments
+
 #### Grid Wrapper
 
 * width -> Sets the witdh
@@ -51,4 +57,5 @@ All props without description are just true or false values and take no argument
 * row -> Sets the grid-row
 
 # License
+
 MIT

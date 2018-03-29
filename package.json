@@ -7,6 +7,13 @@
 		"styled-components": "2.2.4",
 		"styled-is": "1.1.0"
 	},
+	"keywords": [
+		"react",
+		"styled-components",
+		"css",
+		"css grid",
+		"grid"
+	],
 	"devDependencies": {
 		"babel-cli": "^6.26.0",
 		"babel-eslint": "^8.0.3",
