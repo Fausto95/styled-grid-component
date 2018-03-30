@@ -1,53 +1,76 @@
 {
-	"name": "styled-grid-component",
-	"description": "Grid Element for not writing any more custom grid styles because foda-se!",
-	"version": "1.1.2",
-	"main": "dist/index.js",
-	"dependencies": {
-		"styled-components": "2.2.4",
-		"styled-is": "1.1.0"
-	},
-	"keywords": [
-		"react",
-		"styled-components",
-		"css",
-		"css grid",
-		"grid"
-	],
-	"devDependencies": {
-		"babel-cli": "^6.26.0",
-		"babel-eslint": "^8.0.3",
-		"babel-preset-env": "^1.6.1",
-		"babel-preset-react": "^6.24.1",
-		"eslint": "^4.12.1",
-		"eslint-config-airbnb": "^16.1.0",
-		"eslint-plugin-import": "^2.8.0",
-		"eslint-plugin-jest": "^21.4.1",
-		"eslint-plugin-jsx-a11y": "^6.0.2",
-		"eslint-plugin-react": "^7.5.1",
-		"jest": "^21.2.1",
-		"jest-styled-components": "^4.9.0",
-		"prettier": "^1.7.4",
-		"react": "^16.2.0",
-		"react-test-renderer": "^16.2.0"
-	},
-	"scripts": {
-		"lint": "eslint . --cache --fix",
-		"pretest": "npm run lint",
-		"format": "prettier --write '**/*.{js,md}'",
-		"posttest": "npm run format",
-		"precommit": "lint-staged",
-		"test:jest": "jest",
-		"test:watch": "jest --watch",
-		"test:coverage": "jest --coverage",
-		"test": "npm run test:jest && npm run lint",
-		"dist": "babel -s inline -d dist src"
-	},
-	"license": "MIT",
-	"lint-staged": {
-		"**.{js,md}": [
-			"eslint --fix",
-			"git add"
-		]
-	}
+  "name": "styled-grid-component",
+  "description": "Grid Element for not writing any more custom grid styles because foda-se!",
+  "version": "1.1.12",
+  "dependencies": {
+    "styled-is": "1.1.0"
+  },
+  "keywords": [
+    "react",
+    "styled-components",
+    "css",
+    "css grid",
+    "grid"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fausto95/styled-grid-component.git"
+  },
+  "main": "dist/styled-grid-component.umd.js",
+  "jsnext:main": "dist/styled-grid-component.es.js",
+  "module": "dist/styled-grid-component.es.js",
+  "entry": "src/index.js",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.5.1",
+    "babel-preset-env": "^1.6.1",
+    "bup": "^4.1.6",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-jest": "^21.15.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "jest-styled-components": "^4.11.0-1",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.11.1",
+    "react": "^16.3.0",
+    "react-test-renderer": "^16.3.0"
+  },
+  "peerDependencies": {
+    "styled-components": "^3.1.4"
+  },
+  "scripts": {
+    "lint": "eslint . --cache --fix",
+    "pretest": "NODE_ENV=test bup",
+    "format": "prettier --write '**/*.{js,md,json}'",
+    "posttest": "npm run format",
+    "precommit": "lint-staged",
+    "test": "npm run test:jest && npm run lint",
+    "test:jest": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "clean": "rm -rf dist",
+    "build": "NODE_ENV=development bup",
+    "prepublish": "NODE_ENV=production bup"
+  },
+  "license": "MIT",
+  "lint-staged": {
+    "**.{js,md}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/Fausto95/styled-grid-component/issues"
+  },
+  "homepage": "https://github.com/Fausto95/styled-grid-component#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "author": ""
 }
