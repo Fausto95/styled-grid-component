@@ -18,7 +18,7 @@ npm i styled-grid-component
 
 ```jsx
 import React from 'react';
-import Grid, { GridItem } from 'styled-grid-component';
+import { Grid, GridItem } from 'styled-grid-component';
 
 export default () => (
   <Grid
