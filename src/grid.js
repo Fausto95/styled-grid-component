@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import is from 'styled-is';
 
-export default styled.div`
+export const Grid = styled.div`
   display: grid;
   ${is('templateColumns')`
     grid-template-columns: ${props => props.templateColumns};
